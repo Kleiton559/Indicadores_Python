@@ -6,7 +6,8 @@ def display(lista):
       print(item)
 
 #Diretório
-diretory = "C:/Users/krena/OneDrive/Documentos/PROJETOS PESSOAIS/DB_vendas/Vendas"
+#diretory = "C:/Users/krena/OneDrive/Documentos/PROJETOS PESSOAIS/DB_vendas/Vendas"
+diretory = "****Coloque o Seu Diretório Aqui****"
 #listar Arquivos dentro de uma pasta
 lista_arquivos = os.listdir(diretory)
 #display(lista_arquivos)
