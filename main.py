@@ -1,7 +1,7 @@
 #Importação de Bibliotecas
 import os
 import pandas as pd
-
+import plotly.express as px
 
 def display(lista):
     for item in lista:
@@ -57,6 +57,12 @@ print("\n")
 
 #Loja Que mais Vendeu
 print("===LOJA QUE MAIS VENDEU===")
-tabela_lojas = tabela_total.groupby('Loja').sum()
+tabela_lojas = tabela_total.groupby('Loja').sum().sort_values(by="Faturamento",ascending=False)
+
 print(tabela_lojas[["Quantidade Vendida","Preco Unitario","Faturamento"]])
 
+
+
+#Grafico Loja Que mais Vendeu
+grafico = px.bar(tabela_lojas, x=tabela_lojas.index, y='Faturamento')
+grafico.show()
